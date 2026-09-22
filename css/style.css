@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background: #101915;
+  color: #f4f4f0;
+}
+
+/* ---------- Barra promocional ---------- */
+.header__topbar {
+  background: #0a100d;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.header__topbar p {
+  font-size: 0.85rem;
+  color: #39d476;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Fila principal: logo + navegación ---------- */
+.header__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 40px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo__imagen {
+  height: 200px;
+  width: auto;
+}
+
+/* Navegación */
+.nav__lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav__lista a {
+  text-decoration: none;
+  color: #f4f4f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav__lista a:hover {
+  color: #39d476;
+}
+
+/* ---------- Galería de imágenes ---------- */
+.header__galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 40px 24px;
+}
+
+.header__galeria img {
+  width: 160px;
+  height: 107px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #39d476;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .header__main {
+    justify-content: center;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .nav__lista {
+    justify-content: center;
+  }
+
+  .header__galeria {
+    padding: 0 20px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__galeria img {
+    width: 130px;
+    height: 87px;
+  }
+}
